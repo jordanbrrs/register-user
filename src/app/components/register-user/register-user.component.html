@@ -1,0 +1,24 @@
+<h3>Register User</h3>
+
+<div>
+  <form (submit)="save()">
+    <mz-input-container>
+      <input mz-input [label]="'Name'" [(ngModel)]="name" [validate]="true" id="name" name="name" type="text" required>
+    </mz-input-container>
+    <mz-input-container>
+      <input mz-input [label]="'Email'" [(ngModel)]="email" [validate]="true" id="email" name="name" type="email">
+    </mz-input-container>
+    <mz-datepicker-container class="col s12">
+      <input mz-datepicker [label]="'Date of birth'" [options]="datepickerOptions" 
+      [(ngModel)]="dateOfBirth" id="datepicker"
+      placeholder="Select your birth date" name="birthDate" type="text">
+    </mz-datepicker-container>
+    <button type="reset" mz-button>
+        Clear
+    </button>
+    <button type="submit" mz-button>
+        Save
+    </button>
+  </form>
+
+</div>
